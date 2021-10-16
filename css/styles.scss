@@ -4,36 +4,44 @@ $color-pale: #cec8ff;
 $color-mid: #901cad;
 $color-dark: #60106b;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
+$color-teal: #17a2b8;
 
 $body-font: "Open Sans", sans-serif;
 $header-font: "Lobster", cursive;
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: $body-font;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Lobster", cursive;
+  font-family: $header-font;
 }
 
 h2 {
-  color: #3046c5;
+  color: $color-primary;
 }
 
-header h2 {
-  color: #cec8ff;
+header {
+  h2 {
+    color: $color-pale;
+  }
 }
 
 .site-footer {
-  background-image: linear-gradient(#cec8ff, white);
+  background-image: linear-gradient($color-pale, white);
   padding: 20px 0;
 }
 
 .jumbotron {
   padding: 30px;
-  background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
+  background-image: linear-gradient(
+    to right,
+    $color-secondary,
+    $color-primary,
+    $color-dark
+  );
   color: white;
   margin: 0;
 }
@@ -45,7 +53,7 @@ header h2 {
 }
 
 .navbar {
-  background-color: #901cad;
+  background-color: $color-mid;
 }
 
 a,
@@ -55,11 +63,11 @@ a:hover {
   cursor: pointer;
 }
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $color-black-transparent;
 }
 
 .carousel {
-  border: solid #5637dd;
+  border: solid $color-secondary;
 }
 
 #carouselButton {
@@ -67,4 +75,24 @@ a:hover {
   right: 0;
   bottom: 0;
   z-index: 100;
+}
+
+#reserveModal {
+  .modal-header {
+    background-color: $color-teal;
+
+    h3 {
+      color: white;
+    }
+  }
+}
+
+#loginModal {
+  .modal-header {
+    background-color: $color-mid;
+
+    h3 {
+      color: white;
+    }
+  }
 }

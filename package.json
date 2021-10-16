@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
     "clean": "rimraf dist",
+    "scss": "node-sass -o css/ css/",
     "lite": "lite-server",
     "start": "npm run watch:all",
     "imagemin": "imagemin img/* -o dist/img",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "imagemin-cli": "^5.1.0",
     "lite-server": "^2.6.1",
+    "node-sass": "^4.14.1",
     "onchange": "^7.0.0",
     "parallelshell": "3.0.1",
     "usemin-cli": "^0.6.0"
